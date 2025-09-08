@@ -1,0 +1,138 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px #21212166 solid;
+}
+
+.profile__section {
+  width: 420px;
+}
+
+.profile__avatar {
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.profile__name {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.profile__description {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 114px;
+  color: #212121b2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.profile__edit-button {
+  padding: 0;
+  border: none;
+  background-color: #fcf5e5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  width: 108px;
+  gap: 8px;
+  color: #212121b2;
+}
+
+.profile__edit-button:hover {
+  color: #212121;
+}
+
+.profile__edit-icon {
+  opacity: 0.7;
+}
+
+.profile__edit-icon:hover {
+  opacity: 1;
+}
+
+.profile__new-post-button {
+  margin-left: auto;
+  margin-top: auto;
+  padding-top: 18px;
+  padding-right: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+  gap: 8px;
+  opacity: 1;
+  border-radius: 8px;
+  background-color: black;
+  color: #fcf5e5;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.profile__new-post-button:hover {
+  background-color: #212121cc;
+}
+
+.profile__new-post-icon {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 631px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    max-width: 288px;
+    padding: 20px 0 20px;
+  }
+
+  .profile__avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+  }
+
+  .profile__section {
+    text-align: center;
+    padding: 12px 0 20px;
+    width: 100%;
+  }
+
+  .profile__name {
+    margin-bottom: 6px;
+  }
+
+  .profile__description {
+    margin-bottom: 32px;
+  }
+
+  .profile__edit-button {
+    margin: auto;
+  }
+
+  .profile__new-post-button {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+}
