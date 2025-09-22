@@ -117,6 +117,55 @@
       <footer class="footer">
         <p>2025 © Spots</p>
       </footer>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button class="modal__close-button" type="button"></button>
+          <h3 class="modal__title">Edit Profile</h3>
+          <form class="modal__form">
+            <label class="modal__label" for="profile-name-input"
+              >Name
+              <input
+                class="modal__input"
+                type="text"
+                id="profile-name-input"
+                placeholder="Type your name" /></label
+            ><label class="modal__label" for="profile-description-input"
+              >Description
+              <input
+                class="modal__input"
+                type="text"
+                id="profile-description-input"
+                placeholder="Describe yourself"
+            /></label>
+            <button class="modal__submit-button" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button class="modal__close-button" type="button"></button>
+          <h3 class="modal__title">New post</h3>
+          <form class="modal__form">
+            <label class="modal__label" for="profile-image-link-input"
+              >Image Link
+              <input
+                class="modal__input"
+                type="text"
+                id="profile-image-link-input"
+                placeholder="Paste a link to the picture"
+            /></label>
+            <label class="modal__label" for="profile-caption-input"
+              >Caption
+              <input
+                class="modal__input"
+                type="text"
+                id="profile-caption-input"
+                placeholder="Type your caption"
+            /></label>
+            <button class="modal__submit-button" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
