@@ -46,6 +46,7 @@
 }
 
 .profile__edit-button {
+  cursor: pointer;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -73,6 +74,7 @@
 }
 
 .profile__new-post-button {
+  cursor: pointer;
   margin-left: auto;
   margin-top: auto;
   padding: 0;

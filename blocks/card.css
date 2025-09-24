@@ -29,6 +29,7 @@
 }
 
 .card__like-button {
+  cursor: pointer;
   background-image: url(../images/Union.svg);
   border: none;
   background-color: #fcf5e5;
