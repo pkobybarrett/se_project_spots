@@ -8,6 +8,8 @@
   width: 100%;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
 }
 .card__content {
   display: flex;
@@ -37,6 +39,9 @@
   right: 10px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__like-button {

@@ -46,7 +46,7 @@
             <template id="card-template">
               <li class="card">
                 <button type="button" class="card__delete-button"></button>
-                <img src="" alt="" class="card__images" />
+                <img src="#" alt="" class="card__images" />
                 <div class="card__content">
                   <h2 class="card__description"></h2>
                   <button class="card__like-button" type="button"></button>
@@ -97,6 +97,7 @@
                 type="text"
                 id="profile-image-link-input"
                 placeholder="Paste a link to the picture"
+                required
             /></label>
             <label class="modal__label" for="profile-caption-input"
               >Caption
@@ -105,6 +106,7 @@
                 type="text"
                 id="profile-caption-input"
                 placeholder="Type your caption"
+                required
             /></label>
             <button class="modal__submit-button" type="submit">Save</button>
           </form>
@@ -116,7 +118,7 @@
             class="modal__close-button modal__close-button_modify"
             type="button"
           ></button>
-          <img class="modal__image" alt="" src="" />
+          <img class="modal__image" alt="" src="#" />
           <h3 class="modal__caption"></h3>
         </div>
       </div>
