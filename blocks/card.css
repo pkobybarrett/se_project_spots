@@ -1,5 +1,6 @@
 .card {
   max-width: 413px;
+  position: relative;
 }
 
 .card__images {
@@ -27,6 +28,16 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.card__delete-button {
+  background-image: url(../images/State=Default.svg);
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+}
 
 .card__like-button {
   cursor: pointer;
@@ -40,8 +51,21 @@
   opacity: 0.4;
 }
 
+.card__like-button_active {
+  background-image: url(../images/Unionred.svg);
+  opacity: 1;
+}
+
+.card__delete-button:hover {
+  background-image: url(../images/State=Hover.svg);
+}
 .card__like-button:hover {
   opacity: 1;
+}
+
+.card__like-button_active:hover {
+  background-image: url(../images/Unionred.svg);
+  opacity: 0.4;
 }
 
 @media (max-width: 631px) {

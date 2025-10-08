@@ -51,6 +51,46 @@ const newPostCaptionInput = newPostModal.querySelector(
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+const imagePreview = document.querySelector("#image-preview-modal");
+const imageCloseButton = imagePreview.querySelector(".modal__close-button");
+const image = imagePreview.querySelector(".modal__image");
+const captionPreview = imagePreview.querySelector(".modal__caption");
+
+const cardTemplate = document
+  .querySelector("#card-template")
+  .content.querySelector(".card");
+const cardList = document.querySelector(".cards__section");
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__images");
+  const cardTitle = cardElement.querySelector(".card__description");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_active");
+  });
+
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => {
+    cardElement.remove(".cards");
+    //cardElement = null;
+  });
+
+  cardImage.addEventListener("click", () => {
+    image.src = data.link;
+    image.alt = data.name;
+    captionPreview.textContent = data.name;
+    openModal(imagePreview);
+  });
+
+  return cardElement;
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }
@@ -74,6 +114,10 @@ newPostModalCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
+imageCloseButton.addEventListener("click", () => {
+  closeModal(imagePreview);
+});
+
 function handleEditProfileSubmit(event) {
   event.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
@@ -85,6 +129,11 @@ function handleNewPostSubmit(event) {
   event.preventDefault();
   console.log(newPostImageInput.value);
   console.log(newPostCaptionInput.value);
+  const inputValues = getCardElement({
+    name: newPostCaptionInput.value,
+    link: newPostImageInput.value,
+  });
+  cardList.prepend(inputValues);
   closeModal(newPostModal);
 }
 
@@ -92,5 +141,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 newPostModal.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
+  const cardElement = getCardElement(item);
+  cardList.append(cardElement);
+  //console.log(item.name);
 });
